@@ -39,8 +39,10 @@ void draw() {
 class Walker
   {
     int myX, myY;
+    int myColor;
     Walker(){
       myX = myY = 400;
+      myColor = color(0,0,0);
     }
     void walk(){
       myX = myX + (int)(Math.random()*7)-3;
@@ -61,9 +63,9 @@ class Walker
       ellipse(myX,myY,100,100);
       fill(0);
       ellipse(myX-20,myY-20,20,20);
-      fill(0);
+      fill(myColor);
       arc(myX, myY+5, 100, 90, HALF_PI, PI);
 
       }
     }
-}
+  }
