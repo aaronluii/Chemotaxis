@@ -15,7 +15,7 @@ void setup() {
 }
 void draw() {
   {
-    background(64);
+    background(0);
     rick.walk();
     rick.show();
     hillbillies[0].walk();
@@ -27,14 +27,11 @@ void draw() {
     for(int i = 0; i < saviors.length; i++) {
       saviors[i].walk();
       saviors[i].show();
-    if(get(mouseX,mouseY) != color(64)){
+    if(get(mouseX,mouseY) != color(0)){
     fill(255,0,0);
-    text("You Got Eaten by Pac Man :(",400,100);
     }
-    else if(get(mouseX,mouseY) == color(64)){
+    else if(get(mouseX,mouseY) == color(0)){
     fill(#E8F01B);
-    textSize(50);
-    text("Don't Get Eaten by Pac Man!",400,100);
     }
     }
   }
@@ -64,8 +61,9 @@ class Walker
       ellipse(myX,myY,100,100);
       fill(0);
       ellipse(myX-20,myY-20,20,20);
+      fill(0);
       arc(myX, myY+5, 100, 90, HALF_PI, PI);
 
       }
     }
-  }
+}
